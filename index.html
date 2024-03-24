@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: ws: 'unsafe-inline' https://ssl.gstatic.com https://data.binance.vision/ 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:; script-src http://d3js.org 'self' 'unsafe-eval';">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <script src="static/lib/d3.v4.min.js"></script>
+    <title>Goshawk</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="info"></div>
+      <div class="reset">RESET</div>
+      <div class="sync">SYNC DATA</div>
+      <div class="account">ACCOUNT</div>
+      <div class="normal">NORMAL</div>
+      <div class="trend-follow">TREND FOLLOW</div>
+      <div class="bottom-fishing">BOTTOM FISHING</div>
+      <div class="specified">SPECIFIED</div>
+      <div class="overview">OVERVIEW</div>
+    </div>
+    <div class="main">
+      <div class="loader"></div>
+      <div class="topbar">
+        <div class="menu"><img src="static/image/menu.svg"></div>
+        <div class="title">
+          <div class="net"></div>
+          <div class="time"></div>
+        </div>
+        <div class="find"><img src="static/image/random.svg"></div>
+      </div>
+      <div class="account">
+        <div class="ops">
+          <select id="aid" class="form-select form-select-lg mb-3">
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <button id="load" type="button" class="btn btn-outline-primary">Load</button>
+          <button id="save" type="button" class="btn btn-outline-primary">Save</button>
+        </div>
+        <div class="trades"></div>
+      </div>
+      <div class="train">
+        <div class="charts">
+          <div id="overview"></div>
+          <div id="g5m" class="chart" style="display: none;"></div>
+          <div id="g15m" class="chart"></div>
+          <div id="g30m" class="chart"></div>
+          <div id="g1h" class="chart"></div>
+          <div id="g4h" class="chart"></div>
+          <div id="g1d" class="chart"></div>
+        </div>
+        <div class="panel">
+          <div class="sl">
+            <div class="sl_pnl"></div>
+            <div class="sl_size"></div>
+          </div>
+          <div class="ll">
+            <div class="ll_pnl"></div>
+            <div class="ll_size"></div>
+          </div>
+          <div class="hg">
+            <div class="hg_pnl"></div>
+            <div class="hg_size"></div>
+          </div>
+          <div class="ls">
+            <div class="ls_pnl"></div>
+            <div class="ls_size"></div>
+          </div>
+          <div class="ss">
+            <div class="ss_pnl"></div>
+            <div class="ss_size"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="finder">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type</button>
+            <div class="dropdown-menu find-type">
+              <a class="dropdown-item" href="#">Random</a>
+              <a class="dropdown-item" href="#">BottomFishing</a>
+              <a class="dropdown-item" href="#">Custom</a>
+            </div>
+          </div>
+        <input type="text" class="form-control sql" placeholder="" aria-label="SQL" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary confirm" type="button">Query</button>
+        </div>
+      </div>
+      <div class="result list-group">
+        <a href="#" class="list-group-item list-group-item-action">000001 @ 2017-01-01 09:30:00</a>
+        <a href="#" class="list-group-item list-group-item-action">000001 @ 2017-01-01 09:30:00</a>
+        <a href="#" class="list-group-item list-group-item-action">000001 @ 2017-01-01 09:30:00</a>
+        <a href="#" class="list-group-item list-group-item-action">000001 @ 2017-01-01 09:30:00</a>
+        <a href="#" class="list-group-item list-group-item-action">000001 @ 2017-01-01 09:30:00</a>
+        <a href="#" class="list-group-item list-group-item-action">000001 @ 2017-01-01 09:30:00</a>
+      </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="static/app.bundle.js"></script>
+    <script type="text/javascript" src="static/sw.bundle.js"></script>
+  </body>
+</html>

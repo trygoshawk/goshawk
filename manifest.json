@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Goshawk",
+  "short_name": "Goshawk",
+  "version": "com.gombiuda.goshawk",
+  "description": "Trade Trainning Tool",
+  "author": "Hugo Kong",
+  "icons": [],
+  "start_url": "index.html"
+}
